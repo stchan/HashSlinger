@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Code\HashSlinger\HashSlingerTests\HashSlingerTests.csproj" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-11-05" time="13:44:09">
+  <environment nunit-version="2.5.9.10348" clr-version="4.0.30319.239" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Code\HashSlinger\HashSlingerTests" machine-name="ROVINGSCOPE" user="sherman" user-domain="ROVINGSCOPE" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Project" name="C:\Code\HashSlinger\HashSlingerTests\HashSlingerTests.csproj" executed="True" result="Failure" success="False" time="11.731" asserts="0">
+    <results>
+      <test-suite type="Assembly" name="C:\Code\HashSlinger\HashSlingerTests\bin\Debug\HashSlingerTests.dll" executed="True" result="Failure" success="False" time="11.721" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="HashSlingerTests" executed="True" result="Failure" success="False" time="11.719" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="Tests" executed="True" result="Failure" success="False" time="11.710" asserts="0">
+                <results>
+                  <test-case name="HashSlingerTests.Tests.Test1" executed="True" result="Failure" success="False" time="11.693" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Test 1 passed
+  Expected: True
+  But was:  False
+]]></message>
+                      <stack-trace><![CDATA[at HashSlingerTests.Tests.Test1() in C:\Code\HashSlinger\HashSlingerTests\Tests.cs:line 21
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
