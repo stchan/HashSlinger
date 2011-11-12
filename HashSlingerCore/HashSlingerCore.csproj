@@ -41,7 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HashCore.cs" />
+    <Compile Include="MD160Hasher.cs" />
+    <Compile Include="MD5Hasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SHA1Hasher.cs" />
+    <Compile Include="SHA256Hasher.cs" />
+    <Compile Include="SHA384Hasher.cs" />
+    <Compile Include="SHA512Hasher.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
