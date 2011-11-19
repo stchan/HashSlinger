@@ -8,3 +8,5 @@
 /HashSlingerTests/bin
 /HashSlingerTests/obj
 *.suo
+/HashSlingerCore/HashSlingerCore.csproj.user
+/HashSlingerTestRunner/HashSlingerTestRunner.csproj.user
