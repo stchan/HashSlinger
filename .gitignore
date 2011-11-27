@@ -10,3 +10,4 @@
 *.suo
 /HashSlingerCore/HashSlingerCore.csproj.user
 /HashSlingerTestRunner/HashSlingerTestRunner.csproj.user
+/HashSlinger/HashSlinger.csproj.user
