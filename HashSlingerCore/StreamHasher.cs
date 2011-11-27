@@ -6,9 +6,9 @@ using System.Text;
 
 namespace HashSlingerCore
 {
-    abstract public class HashCore
+    public class StreamHasher
     {
-        public HashCore()
+        public StreamHasher()
         { }
 
         /// <summary>

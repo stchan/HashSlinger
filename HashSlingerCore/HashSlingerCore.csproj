@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HashCore.cs" />
+    <Compile Include="StreamHasher.cs" />
     <Compile Include="MD160Hasher.cs" />
     <Compile Include="MD5Hasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

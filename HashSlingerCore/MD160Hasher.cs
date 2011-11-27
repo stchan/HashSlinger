@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HashSlingerCore
 {
-    public class MD160Hasher : HashCore
+    public class MD160Hasher : StreamHasher
     {
         public MD160Hasher()
         { }

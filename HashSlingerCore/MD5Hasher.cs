@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HashSlingerCore
 {
-    public class MD5Hasher : HashCore
+    public class MD5Hasher : StreamHasher
     {
         public MD5Hasher()
         {  }

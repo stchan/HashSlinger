@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HashSlingerCore
 {
-    public class SHA384Hasher : HashCore
+    public class SHA384Hasher : StreamHasher
     {
         public SHA384Hasher()
         { }
