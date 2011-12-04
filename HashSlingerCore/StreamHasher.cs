@@ -12,18 +12,19 @@ namespace HashSlingerCore
         { }
 
         /// <summary>
-        /// 
+        /// Computes hash value for one more files. Note that
+        /// all files will be treated as one continuous stream.
         /// </summary>
-        /// <param name="filenames"></param>
-        /// <param name="bufferSize"></param>
-        /// <returns></returns>
-        public virtual byte[] ComputeFileHash(String[] filenames, int? bufferSize)
+        /// <param name="filenames">File(s) to compute a hash for</param>
+        /// <param name="blockSize">Crypto transform block size (in bytes) - pass null to use default</param>
+        /// <returns>The hash value as a byte array</returns>
+        public virtual byte[] ComputeFileHash(String[] filenames, int? blockSize)
         {
-            ValidateParameters(filenames, ref bufferSize);
+            ValidateParameters(filenames, ref blockSize);
             using (MD5CryptoServiceProvider cryptoProvider = new MD5CryptoServiceProvider())
             {
                 ICryptoTransform cryptoInterface = cryptoProvider;
-                ComputeHashes(filenames, cryptoInterface, bufferSize.Value);
+                ComputeHashes(filenames, cryptoInterface, blockSize.Value);
                 return cryptoProvider.Hash;
             }
         }
@@ -32,12 +33,12 @@ namespace HashSlingerCore
         /// 
         /// </summary>
         /// <param name="filenames"></param>
-        /// <param name="bufferSize"></param>
-        protected virtual void ValidateParameters(String[] filenames, ref int? bufferSize)
+        /// <param name="blockSize"></param>
+        protected virtual void ValidateParameters(String[] filenames, ref int? blockSize)
         {
             if (filenames != null && filenames.Length > 0)
             {
-                if (bufferSize == null || bufferSize <= 0) bufferSize = 16384; // 16K default size
+                if (blockSize == null || blockSize <= 0) blockSize = 16384; // 16K default size
             }
             else
             {
@@ -59,23 +60,23 @@ namespace HashSlingerCore
         /// and passing the blocks into the crytoprovider
         /// </summary>
         /// <param name="filenames">An array of String objects, each containing a filename</param>
-        /// <param name="cryptoInterface">an <see cref="ICryptoTransform"/> interface point to a cryptoprovider</param>
-        /// <param name="bufferSize">Size in bytes of the read buffer</param>
-        protected void ComputeHashes(String[] filenames, ICryptoTransform cryptoInterface, int bufferSize)
+        /// <param name="cryptoInterface">An <see cref="ICryptoTransform"/> interface pointing to a cryptoprovider</param>
+        /// <param name="blockSize">Size in bytes of the transform block / read buffer</param>
+        protected void ComputeHashes(String[] filenames, ICryptoTransform cryptoInterface, int blockSize)
         {
             for (int loop = 0; loop <= filenames.GetUpperBound(0); loop++)
             {
                 using (FileStream inputFile = new FileStream(filenames[loop], FileMode.Open, FileAccess.Read))
                 {
-                    byte[] readBuffer = new byte[(int)bufferSize];
+                    byte[] readBuffer = new byte[(int)blockSize];
                     byte[] copyBuffer;
                     long fileLength = inputFile.Length;
                     int bytesRead = 0;
                     long totalBytesRead = 0;
                     while (totalBytesRead < fileLength)
                     {
-                        bytesRead = inputFile.Read(readBuffer, 0, (int)bufferSize);
-                        if (bytesRead == bufferSize) { copyBuffer = readBuffer; }
+                        bytesRead = inputFile.Read(readBuffer, 0, (int)blockSize);
+                        if (bytesRead == blockSize) { copyBuffer = readBuffer; }
                         else
                         {
                             copyBuffer = new byte[bytesRead];

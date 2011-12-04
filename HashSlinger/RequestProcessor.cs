@@ -49,6 +49,9 @@ namespace HashSlinger
             List<String[]> inputFiles = new List<String[]>();
             if (commandLineOptions.Concatenate)
             {
+                // Files will be treated as a single stream -
+                // copy all filenames into a string array,
+                // then add the array to the List
                 String[] files = new String[commandLineOptions.Items.Count];
                 for (int loop = 0; loop < commandLineOptions.Items.Count; loop++)
                 {
@@ -58,6 +61,9 @@ namespace HashSlinger
             }
             else
             {
+                // Each file treated as a separate entity -
+                // copy each filename into a separate string array,
+                // then add each array to the List
                 foreach (String fileToProcess in commandLineOptions.Items)
                 {
                     String[] file = new String[] { fileToProcess };

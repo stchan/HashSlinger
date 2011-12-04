@@ -13,7 +13,7 @@ namespace HashSlinger
         const string messageNoInputFileSpecifed = "No input file(s) specified.";
 
         const string messageMinimumBlockSize = "Minimum block size is 512 bytes.";
-        const string messageUnknownAlgorithm = "Unknown hash algorithm. Valid values are MD5,MD160,SHA1,SHA256,SHA384,SHA512.";
+        const string messageUnknownAlgorithm = "Unknown hash algorithm. Valid values are MD5, MD160, SHA1, SHA256, SHA384, SHA512.";
 
         static void Main(string[] args)
         {
