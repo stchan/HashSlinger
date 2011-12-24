@@ -11,6 +11,37 @@ namespace HashSlingerCore
         public StreamHasher()
         { }
 
+        #region Public Events
+
+        /// <summary>
+        /// This event is raised when a
+        /// hash transform block is processed
+        /// </summary>
+        public event EventHandler<HasherEventArgs> HashBlockProcessed;
+        protected virtual void OnHashBlockProcessed(HasherEventArgs e)
+        {
+            if (HashBlockProcessed != null)
+            {
+                HashBlockProcessed(this, e);
+            }
+        }
+
+        /// <summary>
+        /// This event is raised when
+        /// all input streams have been read
+        /// and the hash has been computed
+        /// </summary>
+        public event EventHandler<HasherEventArgs> HashComputed;
+        protected void OnHashComputed(HasherEventArgs e)
+        {
+            if (HashComputed != null)
+            {
+                HashComputed(this, e);
+            }
+        }
+
+        #endregion
+
         /// <summary>
         /// Computes hash value for one more files. Note that
         /// all files will be treated as one continuous stream.
@@ -92,9 +123,32 @@ namespace HashSlingerCore
                         {
                             cryptoInterface.TransformBlock(copyBuffer, 0, copyBuffer.Length, copyBuffer, 0);
                         }
+                        // Report progress and
+                        // check for cancellation request
+                        OnHashBlockProcessed(new HasherEventArgs(HasherEventReportType.ProgressReport,
+                                         filenames.Length,
+                                         loop + 1,
+                                         totalBytesRead,
+                                         fileLength));
+                        if (this.cancelRequested == true)
+                        {
+                            throw new OperationCanceledException();
+                        }
+
                     }
                 }
             }
+            OnHashComputed(new HasherEventArgs(HasherEventReportType.Completed, null, null, null, null));
+            
+        }
+
+        protected bool cancelRequested = false;
+        /// <summary>
+        /// Cancels the hash computation
+        /// </summary>
+        protected void Cancel()
+        {
+            this.cancelRequested = true;
         }
 
     }
