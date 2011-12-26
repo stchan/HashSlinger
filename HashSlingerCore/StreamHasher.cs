@@ -138,6 +138,7 @@ namespace HashSlingerCore
                     }
                 }
             }
+            // Report hash computed
             OnHashComputed(new HasherEventArgs(HasherEventReportType.Completed, null, null, null, null));
             
         }
