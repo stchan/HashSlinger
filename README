@@ -1,0 +1,40 @@
+HashSlinger is a command line tool for computing hashes of files.
+Any hash type supported by the .Net CryptoTransform classes
+may be computed (MD5 is the default).
+It can treat multiple files as a continuous stream, so it can be used
+to verify the integrity of large files that have been split.
+A class library (HashSlingerCore.dll) is available for developers (MIT X11 licensed).
+
+Version 4.0 of the .Net framework is required.
+
+Visual C# 2010 Express (with SP1), NUnit 2.5, Warsetup 3.13, and Wix 3.5 were used
+to build, and test the project.
+
+HashSlinger uses/includes the following third party components:
+- CommandLine Parser library (v1.8 stable) - http://commandline.codeplex.com/
+- Hash icon provided by IconArchive under CC 3.0 License - http://www.iconarchive.com/show/red-orb-alphabet-icons-by-iconarchive/Hash-icon.html
+
+
+
+Usage:
+
+   hashslinger [-a {MD5|MD160|SHA1|SHA256|SHA384|SHA512}] [-b blocksize] [-c] file [file2 ...]
+
+Options:
+        -a, --algorithm         Sets hash algorithm. Default is MD5.
+        -b, --blocksize         Block size in bytes. Default is 16384.
+        -c, --concat            Treat all files as a single stream. Default is false.
+
+Example:
+
+   hashslinger -a MD5 -b 65536 foo.txt
+
+Computes MD5 hash for foo.txt using a 65536 byte transform block.
+
+Example 2:
+
+   hashslinger -c foo.txt foo2.txt
+
+Computes MD5 hash for foo.txt and foo2.txt as if they were one continous file.
+Can be used to determine if a file (ie if foo.txt and foo2.txt are parts
+of a large media file created by a filesplitter) was split properly.
