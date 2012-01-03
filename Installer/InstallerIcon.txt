@@ -1,0 +1,2 @@
+    <Icon Id="icon.ico" SourceFile="..\common\Hash.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />    

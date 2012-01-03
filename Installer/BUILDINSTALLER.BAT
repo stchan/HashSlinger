@@ -1,0 +1,4 @@
+ "C:\Program Files (x86)\Windows Installer XML v3.5\bin\candle.exe" "C:\Code\HashSlinger\Installer\HashSlinger.wxs" "-ext" "C:\Program Files (x86)\Windows Installer XML v3.5\bin\WixUIExtension.dll" "-ext" "C:\Program Files (x86)\Windows Installer XML v3.5\bin\WixUtilExtension.dll" "-out" "C:\Code\HashSlinger\Installer\HashSlinger.wixobj" 
+ "C:\Program Files (x86)\Windows Installer XML v3.5\bin\light.exe" "-out" "C:\Code\HashSlinger\Installer\HashSlinger.msi" "C:\Code\HashSlinger\Installer\HashSlinger.wixobj" "-ext" "C:\Program Files (x86)\Windows Installer XML v3.5\bin\WixUIExtension.dll" "-ext" "C:\Program Files (x86)\Windows Installer XML v3.5\bin\WixUtilExtension.dll" "-cultures:en-US" "-b" "C:\Program Files (x86)\Jgaa's Internet\War Setup\Licenses" "-b" "\." 
+ pause
+ 
