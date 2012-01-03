@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Hash.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,6 +53,9 @@
     <Compile Include="SHA256Hasher.cs" />
     <Compile Include="SHA384Hasher.cs" />
     <Compile Include="SHA512Hasher.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hash.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
