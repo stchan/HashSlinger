@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WarSetup-Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" projectRunAfterInstall="false" mainTargetApp="ID_774c1087_52ea_40df_8653_0d74ccfac583" nextUniqueId="1186" projectName="HashSlinger" projectUuid="5074cfcb-c4ea-41e6-a5c7-aaccd6d42e73" projectUpgradeUuid="32aa37e1-9cc5-4bfd-af13-274dd09f1f75" projectVersion="1.0.1" projectFromWindowsVersion="Windows XP SP 2" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="C:\Code\HashSlinger\Installer" projectTargetName="HashSlinger" projectType="0" projectUserInterface="WixUI_InstallDir">
+<WarSetup-Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" projectRunAfterInstall="false" mainTargetApp="ID_50181896_2906_466e_a578_15093355c49b" nextUniqueId="1434" projectName="HashSlinger" projectUuid="f2e7e397-8cbf-4488-8475-bd3d2401905e" projectUpgradeUuid="32aa37e1-9cc5-4bfd-af13-274dd09f1f75" projectVersion="1.0.1" projectOrganization="Black Telescope Workshop" projectFromWindowsVersion="Windows XP SP 2" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="C:\Code\HashSlinger\Installer" projectTargetName="HashSlinger" projectType="0" projectUserInterface="WixUI_InstallDir">
   <LicencePaths>
     <string>C:\Program Files (x86)\Jgaa's Internet\War Setup\Licenses</string>
+    <string>\.</string>
   </LicencePaths>
   <Virgin>false</Virgin>
   <projectFeatures featureId="ID3EE2C9FC79F0C01EE539A86967E207BC" featureName="HashSlinger" featureDescription="HashSlinger MSI Package" configurableDirectory="APPLICATIONFOLDER" configurableDirectoryDefaultPath="[ProjectName]" enableInDefaultInstall="true" enableInMinimalInstall="true" excludeFromBuild="false">
     <childFeatures featureId="PROGRAM" featureName="Program" featureDescription="The Main Executable" enableInDefaultInstall="true" enableInMinimalInstall="true" excludeFromBuild="false">
-      <components componentId="ID1001" componentGuid="895c421a-62d4-4d12-8c85-ba87d55c3780">
-        <componentFiles fileId="ID_760cc8fb_5a73_4d10_930e_1a6c021d0acb" srcName="CommandLine.dll" srcDirectory="C:\Code\HashSlinger\HashSlinger\bin\Release" dstName="CommandLine.dll" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="CommandLine" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
-          <service StartWhenInstalled="true" Remove="both" id="ID1000" isService="false" userAccount="" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+      <components componentId="ID1193" componentGuid="0055f832-691b-43c1-a11a-43dd5d6bc50f">
+        <componentFiles fileId="ID_50181896_2906_466e_a578_15093355c49b" srcName="HashSlinger.exe" srcDirectory="..\HashSlinger\bin\Release" dstName="HashSlinger.exe" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="HashSlinger" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
+          <service StartWhenInstalled="true" Remove="both" id="ID1192" isService="false" userAccount="" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
         </componentFiles>
         <addToCreateFolder>false</addToCreateFolder>
       </components>
-      <components componentId="ID1003" componentGuid="f9f597fa-5313-4e9d-a706-8ed048c7a2dd">
-        <componentFiles fileId="ID_774c1087_52ea_40df_8653_0d74ccfac583" srcName="HashSlinger.exe" srcDirectory="C:\Code\HashSlinger\HashSlinger\bin\Release" dstName="HashSlinger.exe" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="HashSlinger" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
-          <service StartWhenInstalled="true" Remove="both" id="ID1002" isService="false" userAccount="" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+      <components componentId="ID1287" componentGuid="5e66a0f8-4d3e-4d29-9549-8ca9873a6184">
+        <componentFiles fileId="ID_33959b40_64e4_43c9_9d2a_236e842c174e" srcName="HashSlingerShell.bat" srcDirectory="..\HashSlinger\bin\Release" dstName="HashSlingerShell.bat" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="HashSlinger Shell" shortcutInProgramFilesMenu="true" shortcutOnDesktop="true" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="[APPLICATIONFOLDER]" shortcutCommandArguments="" shortcutDescription="">
+          <service StartWhenInstalled="true" Remove="both" id="ID1286" isService="false" userAccount="" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
         </componentFiles>
         <addToCreateFolder>false</addToCreateFolder>
       </components>
-      <components componentId="ID1005" componentGuid="0f4c9cb3-edf4-4fa2-910a-5f130856315d">
-        <componentFiles fileId="ID_94a6efa4_6be1_45f7_9138_2737a2eae578" srcName="HashSlingerCore.dll" srcDirectory="C:\Code\HashSlinger\HashSlinger\bin\Release" dstName="HashSlingerCore.dll" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="HashSlingerCore" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
-          <service StartWhenInstalled="true" Remove="both" id="ID1004" isService="false" userAccount="" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+      <components componentId="ID1307" componentGuid="96990d07-8753-472e-a15f-6b84fec79652">
+        <componentFiles fileId="ID_1f685a64_009c_461c_9341_7f0942e1c614" srcName="CommandLine.dll" srcDirectory="..\HashSlinger\bin\Release" dstName="CommandLine.dll" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="CommandLine" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
+          <service StartWhenInstalled="true" Remove="both" id="ID1306" isService="false" userAccount="" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
+        </componentFiles>
+        <addToCreateFolder>false</addToCreateFolder>
+      </components>
+      <components componentId="ID1309" componentGuid="a5ffc123-478c-4bcc-96c8-5e9271476010">
+        <componentFiles fileId="ID_17c36d6a_fbf5_468c_9638_ef762a968b6d" srcName="HashSlingerCore.dll" srcDirectory="..\HashSlinger\bin\Release" dstName="HashSlingerCore.dll" dstPath="" isTrueTypeFont="false" isComModule="false" typelibGuid="" menuName="HashSlingerCore" shortcutInProgramFilesMenu="false" shortcutOnDesktop="false" shortcutInQuickLaunch="false" shortcutInStartupFolder="false" shortcutWorkingDirectory="" shortcutCommandArguments="" shortcutDescription="">
+          <service StartWhenInstalled="true" Remove="both" id="ID1308" isService="false" userAccount="" userPassword="" cmdLineArguments="" errorControl="normal" interactive="false" loadOrderGroup="" serviceName="" startMode="auto" vital="true" />
         </componentFiles>
         <addToCreateFolder>false</addToCreateFolder>
       </components>
@@ -28,12 +35,12 @@
     </childFeatures>
     <defaultInstallMode>3</defaultInstallMode>
   </projectFeatures>
-  <projectInstallForCurrentOrAllUsers>0</projectInstallForCurrentOrAllUsers>
+  <projectInstallForCurrentOrAllUsers>1</projectInstallForCurrentOrAllUsers>
   <License>
     <System>true</System>
     <Name>X11 License</Name>
   </License>
-  <projectProperties LicencePath="" TopBanner="" BigBanner="" ExclamationIcon="" InfoIcon="" NewIcon="" UpIcon="" VS2003Integration="" VS2005Integration="" UseRelativePaths="true" LaunchAppText="" UseWixUI_ErrorProgressText="true" UseWixUI="true" CreateUninstallShortcut="false" Codepage="1252" ProductLanguage="1033" AlwaysMajorUpgrade="true" SupressValidation="false" Compress="true" BuildTarget="true" PublisherUrl="" SupportContact="" SupportUrl="" SupportPhone="" ReadMeFile="" UpdateUrl="" Comments="" Icon="" EmbedCab="true" MaxCabSize="0" CabCompressionLevel="mszip" InstallerVersion="300">
+  <projectProperties LicencePath="\." TopBanner="" BigBanner="" ExclamationIcon="" InfoIcon="" NewIcon="" UpIcon="" VS2003Integration="VS2003_INTEGRATION" VS2005Integration="VS2005_INTEGRATION" UseRelativePaths="true" LaunchAppText="" UseWixUI_ErrorProgressText="true" UseWixUI="true" CreateUninstallShortcut="true" Codepage="1252" ProductLanguage="1033" AlwaysMajorUpgrade="true" SupressValidation="false" Compress="true" BuildTarget="true" PublisherUrl="" SupportContact="" SupportUrl="" SupportPhone="" ReadMeFile="" UpdateUrl="" Comments="" Icon="[APPLICATIONFOLDER]\HashSlinger.exe" EmbedCab="true" MaxCabSize="0" CabCompressionLevel="mszip" InstallerVersion="300">
     <UiCultures Name="en-US" Enabled="true" />
     <UiCultures Name="de-de" Enabled="false" />
     <UiCultures Name="es-es" Enabled="false" />
