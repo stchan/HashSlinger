@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WarSetup-Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" projectRunAfterInstall="false" mainTargetApp="ID_50181896_2906_466e_a578_15093355c49b" nextUniqueId="1434" projectName="HashSlinger" projectUuid="f2e7e397-8cbf-4488-8475-bd3d2401905e" projectUpgradeUuid="32aa37e1-9cc5-4bfd-af13-274dd09f1f75" projectVersion="1.0.1" projectOrganization="Black Telescope Workshop" projectFromWindowsVersion="Windows XP SP 2" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="C:\Code\HashSlinger\Installer" projectTargetName="HashSlinger" projectType="0" projectUserInterface="WixUI_InstallDir">
+<WarSetup-Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" projectRunAfterInstall="false" mainTargetApp="ID_50181896_2906_466e_a578_15093355c49b" nextUniqueId="1480" projectName="HashSlinger" projectUuid="da8cd932-a3a2-4ca1-bc23-9622a6d757c2" projectUpgradeUuid="32aa37e1-9cc5-4bfd-af13-274dd09f1f75" projectVersion="1.0.1" projectOrganization="Black Telescope Workshop" projectFromWindowsVersion="Windows XP SP 2" projectMustBeAdministratorToInstall="false" project64BitTarget="false" projectTargetDirectory="C:\Code\HashSlinger\Installer" projectTargetName="HashSlinger" projectType="0" projectUserInterface="WixUI_InstallDir">
   <LicencePaths>
     <string>C:\Program Files (x86)\Jgaa's Internet\War Setup\Licenses</string>
     <string>\.</string>
@@ -40,7 +40,7 @@
     <System>true</System>
     <Name>X11 License</Name>
   </License>
-  <projectProperties LicencePath="\." TopBanner="" BigBanner="" ExclamationIcon="" InfoIcon="" NewIcon="" UpIcon="" VS2003Integration="VS2003_INTEGRATION" VS2005Integration="VS2005_INTEGRATION" UseRelativePaths="true" LaunchAppText="" UseWixUI_ErrorProgressText="true" UseWixUI="true" CreateUninstallShortcut="true" Codepage="1252" ProductLanguage="1033" AlwaysMajorUpgrade="true" SupressValidation="false" Compress="true" BuildTarget="true" PublisherUrl="" SupportContact="" SupportUrl="" SupportPhone="" ReadMeFile="" UpdateUrl="" Comments="" Icon="[APPLICATIONFOLDER]\HashSlinger.exe" EmbedCab="true" MaxCabSize="0" CabCompressionLevel="mszip" InstallerVersion="300">
+  <projectProperties LicencePath="\." TopBanner="TopBanner.bmp" BigBanner="BigBanner.bmp" ExclamationIcon="" InfoIcon="" NewIcon="" UpIcon="" VS2003Integration="VS2003_INTEGRATION" VS2005Integration="VS2005_INTEGRATION" UseRelativePaths="true" LaunchAppText="" UseWixUI_ErrorProgressText="true" UseWixUI="true" CreateUninstallShortcut="true" Codepage="1252" ProductLanguage="1033" AlwaysMajorUpgrade="true" SupressValidation="false" Compress="true" BuildTarget="true" PublisherUrl="" SupportContact="" SupportUrl="" SupportPhone="" ReadMeFile="" UpdateUrl="" Comments="" Icon="[APPLICATIONFOLDER]\HashSlinger.exe" EmbedCab="true" MaxCabSize="0" CabCompressionLevel="mszip" InstallerVersion="300">
     <UiCultures Name="en-US" Enabled="true" />
     <UiCultures Name="de-de" Enabled="false" />
     <UiCultures Name="es-es" Enabled="false" />
