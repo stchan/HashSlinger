@@ -38,6 +38,6 @@ Example 2:
 
    hashslinger -c foo.txt foo2.txt
 
-Computes MD5 hash for foo.txt and foo2.txt as if they were one continous file.
+Computes MD5 hash for foo.txt and foo2.txt as if they were one continuous file.
 Can be used to determine if a file (ie if foo.txt and foo2.txt are parts
 of a large media file created by a filesplitter) was split properly.
