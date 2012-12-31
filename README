@@ -1,3 +1,5 @@
+Download MSI Installer here: https://skydrive.live.com/redir?resid=72C30A5AFDA4468A!5618&authkey=!AIfvs2r1GRuA0CE
+
 HashSlinger is a command line tool for computing hashes of files.
 Any hash type supported by the .Net CryptoTransform classes
 may be computed (MD5 is the default).
