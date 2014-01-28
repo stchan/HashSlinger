@@ -1,1 +1,1 @@
-@start cmd /k "set Path=%CD%;%Path%"
+@start "HashSlinger" cmd /k "set Path=%CD%;%Path%"
